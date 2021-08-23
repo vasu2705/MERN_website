@@ -4,11 +4,12 @@ const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
 
 const app = express();
+const PORT = process.env.PORT || 5000;
 // ======================================dotenv ==================================
 dotenv.config({ path: "./config.env" });
 require("./db/conn");
 // const User = require("./models/userschema");
-const PORT = process.env.PORT || 5000;
+
 //====================================== express middleware (link router file) ==============================
 app.use(express.json());
 app.use(cookieParser());
