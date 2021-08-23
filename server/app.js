@@ -16,7 +16,7 @@ app.use(cookieParser());
 app.use(require("./router/routes.js"));
 // ==================================== variable use =====================================
 // STEP 2 OF HOSTING
-const port = process.env.PORT;
+
 // STEP 3 OF HOSTING
 if (process.env.NODE_ENV == "production") {
   app.use(express.static("client/build"));
