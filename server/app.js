@@ -16,7 +16,7 @@ app.use(cookieParser());
 app.use(require("./router/routes.js"));
 // ==================================== variable use =====================================
 // STEP 2 OF HOSTING
-const PORT = process.env.PORT;
+const port = process.env.PORT;
 // STEP 3 OF HOSTING
 if (process.env.NODE_ENV == "production") {
   app.use(express.static("client/build"));
@@ -26,6 +26,6 @@ if (process.env.NODE_ENV == "production") {
   });
 }
 
-app.listen(PORT, () => {
-  console.log(`server is running at port ${PORT}`);
+app.listen(port, () => {
+  console.log(`server is running at port ${port}`);
 });
